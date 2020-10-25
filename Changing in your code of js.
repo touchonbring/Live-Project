@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            #div {
+                margin: 10px;
+                font-size: 1.25em;
+            }
+            table {
+                broder-collapse: collapse;
+                border: 1x solid #a69dc9;
+            }
+            td {
+                border: 1px #a88d8e solid;
+                width: 50px;
+                height: 50px;
+                text-align: center;
+            }
+        </style>
+        <meta charset="utf-8" />
+        <title>Untitled Document</title>
+    </head>
+    <body>
+        <label for="gettablename" id="tbbname">Enter TAble</label><br />
+        <input type="number" id="tbname" /><br />
+        <label for="gettitraton" id="itrat">Time to Multiply</label><br />
+        <input type="number" id="nottm" /><br />
+        <input type="button" id="result" onClick="createtable(tbname.value,nottm.value)" value="Create Table" />
+        <div id="div1"></div>
+        <script>
+            function createtable(a,b) { 
+debugger;
+ var colno=5; 
+var div1=document.getElementById('div1'); 
+var tbl=document.createElement("table");
+ //create dynamic table
+ for(var r=0; r<b;r++) { var row=document.createElement("tr");
+ //create cell 
+for(var c=0;c<colno;c++) { 
+var cell=document.createElement("td");
+ var celltext=document.createTextNode(a);
+ cell.appendChild(celltext);
+ row.appendChild(cell); 
+} 
+tbl.appendChild(row); 
+} 
+div1.appendChild(tbl); }
+        </script>
+    </body>
+</html>
